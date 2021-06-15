@@ -16,7 +16,7 @@ pipeline {
           steps {
                echo 'executing gradle...'
             
-                  sh './gradlew -v'
+                  sh '${JENKINS_HOME}/gradlew -v'
                
           }
        }
