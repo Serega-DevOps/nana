@@ -16,7 +16,7 @@ pipeline {
           steps {
                echo 'executing gradle...'
             
-                  sh '${JENKINS_HOME}/gradlew -v'
+                  sh '/var/lib/jenkins/tools/hudson.plugins.gradle.GradleInstallation/Gradle-7-0-2/bin/gradlew -v'
                
           }
        }
