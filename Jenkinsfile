@@ -9,7 +9,7 @@ pipeline {
                 }
           }
        }
-       stage (""run backend") {
+       stage ("run backend") {
           steps {
                echo 'executing grandle...'
                withGrandle() {
