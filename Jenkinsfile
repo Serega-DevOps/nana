@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    tools {
-     gradle 'Gradle-7-0-2'
-    }
+
     stages {
        stage ("run frontend") {
           steps {
@@ -15,8 +13,10 @@ pipeline {
        stage ("run backend") {
           steps {
                echo 'executing gradle...'
-            
-                  sh '/var/lib/jenkins/tools/hudson.plugins.gradle.GradleInstallation/Gradle-7-0-2/bin/gradle -v'
+                 withGradle() {
+                   sh './gradle -v'
+                 }
+                  
                
           }
        }
